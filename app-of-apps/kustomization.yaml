@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: zipk0p0br-python 
+  janus-idp.io/tekton: zipk0p0br-python
+  backstage.io/kubernetes-id: zipk0p0br-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: zipk0p0br-python
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
